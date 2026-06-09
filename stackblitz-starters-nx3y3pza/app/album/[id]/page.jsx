@@ -84,7 +84,7 @@ export default function AlbumPage() {
   const formatSize = (bytes) => bytes > 1048576 ? `${(bytes / 1048576).toFixed(1)}MB` : `${(bytes / 1024).toFixed(0)}KB`
 
   return (
-    <div style={{ minHeight: '100vh' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <div style={{ borderBottom: '1px solid #1a1a1a', padding: '16px 24px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', position: 'sticky', top: 0, background: '#0a0a0a', zIndex: 10 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
           <Link href="/dashboard" style={{ color: '#555', fontSize: '13px' }}>← Albums</Link>
@@ -136,7 +136,7 @@ export default function AlbumPage() {
         </div>
       )}
 
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '28px 24px' }}>
+      <div style={{ flex: 1, maxWidth: '1200px', width: '100%', margin: '0 auto', padding: '28px 24px' }}>
         <div onClick={() => fileRef.current.click()}
           style={{ border: '1px dashed #2a2a2a', borderRadius: '12px', padding: '28px', textAlign: 'center', cursor: 'pointer', marginBottom: '28px' }}
           onMouseEnter={e => e.currentTarget.style.borderColor = '#444'}
@@ -188,6 +188,18 @@ export default function AlbumPage() {
           </div>
         )}
       </div>
+
+      {/* Footer with Flaticon attribution */}
+      <div style={{ padding: '16px 24px', display: 'flex', justifyContent: 'flex-end', borderTop: '1px solid #111' }}>
+        <a href="https://www.flaticon.com" title="Icons by Flaticon" target="_blank" rel="noopener noreferrer"
+          style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#333', fontSize: '11px', textDecoration: 'none' }}
+          onMouseEnter={e => e.currentTarget.style.color = '#555'}
+          onMouseLeave={e => e.currentTarget.style.color = '#333'}>
+          <img src="/passkey-icon.svg" alt="flaticon" style={{ width: '14px', height: '14px', opacity: 0.4 }} />
+          Icons by Flaticon
+        </a>
+      </div>
+
     </div>
   )
 }
