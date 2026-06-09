@@ -95,10 +95,11 @@ export default function LoginPage() {
             <button onClick={handlePasskey}
               style={{ background: '#1a1a1a', color: '#f0f0f0', padding: '11px', borderRadius: '10px', border: '1px solid #2a2a2a', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', fontSize: '14px' }}>
               <img 
-  src="https://cdn-icons-png.flaticon.com/512/YOUR_ICON_ID.png"
-  alt="passkey"
-  style={{ width: '20px', height: '20px', filter: 'invert(1)' }}
-/> {isSignup ? 'Register passkey' : 'Sign in with passkey'}
+  src="/passkey-icon.png" 
+  alt="passkey" 
+  style={{ width: '20px', height: '20px' }} 
+/>
+{isSignup ? 'Register passkey' : 'Sign in with passkey'}
             </button>
           </div>
 
