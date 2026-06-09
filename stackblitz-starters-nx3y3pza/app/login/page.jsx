@@ -94,11 +94,15 @@ export default function LoginPage() {
 
             <button onClick={handlePasskey}
               style={{ background: '#1a1a1a', color: '#f0f0f0', padding: '11px', borderRadius: '10px', border: '1px solid #2a2a2a', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', fontSize: '14px' }}>
-              <img 
-  src="/passkey-icon.png" 
-  alt="passkey" 
-  style={{ width: '20px', height: '20px' }} 
-/>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#aaa' }}>
+  <rect x="3" y="3" width="18" height="18" rx="3"/>
+  <circle cx="8" cy="9" r="1" fill="currentColor"/>
+  <circle cx="12" cy="9" r="1" fill="currentColor"/>
+  <circle cx="16" cy="9" r="1" fill="currentColor"/>
+  <circle cx="8" cy="14" r="1" fill="currentColor"/>
+  <circle cx="12" cy="14" r="1" fill="currentColor"/>
+  <circle cx="16" cy="14" r="1" fill="currentColor"/>
+</svg>
 {isSignup ? 'Register passkey' : 'Sign in with passkey'}
             </button>
           </div>
@@ -132,6 +136,15 @@ export default function LoginPage() {
             </button>
           </p>
         </div>
+
+        <p style={{ fontSize: '10px', color: '#333', textAlign: 'center', marginTop: '16px' }}>
+          Icons by{' '}
+          <a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer" style={{ color: '#444' }}>
+            Flaticon
+          </a>{' '}
+          — smart lock by juicy_fish, pin code by Freepik
+        </p>
+
       </div>
     </div>
   )
